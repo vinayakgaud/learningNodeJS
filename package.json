@@ -1,0 +1,12 @@
+{
+  "name": "learning-nodejs",
+  "version": "1.0.0",
+  "description": "learning nodejs functionalities",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node hello"
+  },
+  "author": "",
+  "license": "ISC"
+}
