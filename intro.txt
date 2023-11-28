@@ -1,9 +1,14 @@
-//dom and window element of JS is removed in node we cannot run it in node cli
-//file handling, cryptography, hashing is added in node
-//npm init to start node file, to create package.json
-//we can write our own scripts also in package.json of node, and run it using npm run scriptName, npm scriptName
+dom and window element of JS is removed in node we cannot run it in node cli
+file handling, cryptography, hashing is added in node
+npm init to start node file, to create package.json
+we can write our own scripts also in package.json of node, and run it using npm run scriptName, npm scriptName
+
+run js in node as `node filename`
+and it we add that file in  package.json as script 
+npm run scriptName/ npm scriptName
+
 console.log('Hey there') //we can run it in node using node hello
-// console.log(window) //as it is web element it doesn't work in node
+console.log(window) //as it is web element it doesn't work in node
 /**
  * console.log(window)
             ^

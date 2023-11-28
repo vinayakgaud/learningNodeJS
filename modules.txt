@@ -1,0 +1,40 @@
+instead of writing everything under single file or single function we  can create different files  each file for specific action and then use it as module in other file
+const math = require('math'); //if we write it this way it will give error because it will search for math in inbuilt or installed modules
+const mathModule = require('./math') //we have to use this way have to provide complete directory path, ./ represent current directory
+
+we use require method to import module
+
+whatever module we have created will show empty object because functions are private so we need to export it using module lib
+module.exports = 'value' //value will be value to be exported, we can export anything here, function ,string etc
+
+console.log(mathModule) /**
+    $ npm start
+
+> learning-nodejs@1.0.0 start
+> node main
+
+Vinayak - we getting vinayak as output because we exported vinayak in math.js
+*/
+
+we can also import modules using es module as
+import mathModule from './math'
+
+import math from './math' //we need to mention type == module in HTML
+//learn more about it from here - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+console.log(math) 
+/**
+ * import math from './math'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.10.0
+ */
