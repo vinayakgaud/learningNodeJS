@@ -24,3 +24,11 @@ ReferenceError: window is not defined
 
 Node.js v20.10.0
  */
+
+ it is always better to work with non blocking methods/ operations emans asynchronos properties
+
+ npmjs is node package manager javascript it has all packages that we can install in our node
+
+ if we have any dependency in package.json and we mistakenly delete node_modules then we can run npm install to install all dependencies
+
+ all our install package dependencies code are under node_modules

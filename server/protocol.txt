@@ -1,0 +1,8 @@
+we have ws protocol for web socket if we have to do realtime communication
+
+https uses ssl certificate to encrypt data
+http is not that secure
+
+in url we have query parameters after ? where we can pass key value pair values
+
+protocol:domain/path?queryparameters&queryparameters2 - structure of URL, you cannot have places in url change it to +
