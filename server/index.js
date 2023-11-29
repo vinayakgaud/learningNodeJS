@@ -14,7 +14,7 @@ const myServer = http.createServer((req, res)=>{
     //logging request from user
     //1701277759915: /about?id=1&a=5 New Request Received
 
-    const log = `${Date.now()}: ${req.url} ${req.method} New Request Received\n`, //req.method provide HTTP method
+    const log = `${Date.now()}: ${req.url} ${req.method} New Request Received\n` //req.method provide HTTP method
 
     //we receive two logs for single request, because browser send 1 extra request for favicon
     const myUrl = url.parse(req.url, true) //true is for passign query string
