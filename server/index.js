@@ -1,4 +1,4 @@
-//for server we have http module to use
+//server using HTTP module
 const http = require('http')
 //http doesn't able to differentiat between url path and query parameters so it logs everything in req.url
 //so we use external package for it
