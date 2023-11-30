@@ -34,3 +34,5 @@ Node.js v20.10.0
  all our install package dependencies code are under node_modules
 
  we can use npm uninstall to unintall the module
+
+ npm i moduleName@version, -> to install specific version

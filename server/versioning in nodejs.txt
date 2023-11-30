@@ -1,0 +1,21 @@
+Version
+4.18.2
+1st Part -> 4
+2nd part -> 18
+3rd Part -> 2
+
+//3rd part Minor Updates, like cosmetic typhography or minor fixes, which we can update but its not show stopper (Optional)
+-> we can check change log and then decide if need to update or not
+//2nd part Recommended bug Fixes, (Security fix), recommended to update, critical fixes, change in functionality or security fixes
+-> we are recommended to update
+//1st Part Major/ Breaking Update, we should not update to this version, if we are working on already created app, which uses version 4 for ex then we should not update to version 5 as that update may break the code and our code might not work, and if we are working on completely new app, then we should use latest version
+-> we should see the change logs and update it if required only for new app
+
+-> ^ (compatible with version) means install all recommended and minor fixes but not major version
+^4.18.2 means, whenever we update or package npm update system will update the recommended and minor version but not major version
+it will change to 4.19.4 or so but no 5.0.0
+
+if we have version with carrot symbol 4.18.2 it means version is lock never update the version, we will have to manually update the version
+
+~ - approximate version
+~4.18.2 - it will onlyh update minor version and not update major and recommended versions
