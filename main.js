@@ -1,7 +1,7 @@
 //instead of creating math functions in here we can create separate module
 //to use another module in this file we can use below method
 // const math = require('math'); //if we write it this way it will give error because it will search for math in inbuilt or installed modules
-const mathModule = require('./math') 
+import mathModule, { add as _add, sub as _sub } from './math' 
 //require is node specific attribute
 //we have to use this way have to provide complete directory path, ./ represent current directory
 // console.log(mathModule) //module.exports = add
@@ -18,12 +18,12 @@ Vinayak - we getting vinayak as output because we exported vinayak in math.js
 // console.log(mathModule.addFn(2,4)) //op- 6, mathModule is exported as add function
 // console.log(mathModule.subFn(2,4)) //6
 // -2, if we name it
-console.log(mathModule.add(2,4))
-console.log(mathModule.sub(2,4))
+console.log(_add(2,4))
+console.log(_sub(2,4))
 //there is different wau to import it, need to check documentation
 //we can also call it by destructuring
 
-const {add, sub} = require('./math')
+import { add, sub } from './math'
 console.log(add(2,4))
 console.log(sub(2,4))
 

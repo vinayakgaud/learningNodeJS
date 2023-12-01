@@ -1,0 +1,26 @@
+Rest API or Restful API (representational state transfer architectural style.)
+
+1. Representation of type, type of a API
+2. It has set of rules
+3. Best practices to follow
+then we can say that our server is based on Restful API
+
+server is different entity and client is different entity and they should not be interdependent in Rest
+
+
+ex - if client requested something and then server decides what to send, if server sends html then it will work if client is browser will not work for mobile or alexa, 1st problem
+
+second client is dependent on server because server is creating html so client is dependent on server in Restful API this should not happen
+
+SSR - server side rendering, html page rendered on server and sent to client, it is important and many companies uses server side rendering
+
+CSR - if server sends JSON, then client can use that JSON to render on client side however they want, server only did its work of sending data
+
+
+2. Always respect all HTTP methods
+use GET to get data, POST to create data, PATCH to update data
+
+//express methods
+res.send() to send text data
+res.render() to render data for html
+res.JSON() to send JSON object data

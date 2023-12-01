@@ -1,0 +1,22 @@
+REST API - with JSON data
+
+Servers should be hybrid server as it should support both browser and mobile
+
+GET /users - List all users so if we get endpoint as /users it means it is in browser so we can render HTML,
+GET /api/users - if it has api infront of it then it will pass json and frontend can handle it
+GET /api/users/1 - Get the user with ID 1
+GET /api/users/2 - Get the user with ID 2
+
+Dynamic Path parameter
+GET /api/users/:id
+
+when we mention :id it means id variable / dynamic
+
+POST /api/users - Create a new user
+
+PATCH /api/users/1 - Edit the user with ID 1
+
+Delete /api/users/1 - Delete the user with ID 1
+
+
+//using mockaroo to get data for testing purposes

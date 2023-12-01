@@ -1,5 +1,5 @@
 //for filesystem we use module fs
-const fs = require('fs');
+import { rmdirSync, mkdirSync } from 'fs';
 
 //to create a new file
 // fs.writeFileSync('./text.txt', 'Hello There') //first parameter is dir, second is file content
@@ -68,5 +68,5 @@ const fs = require('fs');
 
 //to make directory
 // fs.mkdirSync('synchronousDirectory') //to make single directory
-fs.rmdirSync('synchronousDirectory') //to remove directory
-fs.mkdirSync('synchronousDirectory/a/a', {recursive: true}) //recursive true means run func recursively and create internal sub folders also
+rmdirSync('synchronousDirectory') //to remove directory
+mkdirSync('synchronousDirectory/a/a', {recursive: true}) //recursive true means run func recursively and create internal sub folders also

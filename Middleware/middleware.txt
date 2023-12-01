@@ -1,0 +1,3 @@
+middleware act as the middle man between client and server
+client sends the request and middleware validates the request for threat, if it is successful then middleware send the request to server and server sends back response
+and if validation is failed then the middleware send request back to client
