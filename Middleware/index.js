@@ -23,6 +23,11 @@ app.use((req, res, next)=>{
 });
 
 app.get('/api/users/:name',(req, res)=>{
+    //setting our own header
+    res.setHeader('X-My-Name','Vinayak')
+    //Always add X to custom header, because it is good practice
+    console.log(req.headers.requestheader)
+    console.log(req.headers)
     return res.json({
         msg: `Welcome to homepage ${req.params.name} your job title is ${req.myUserJob}`
     })

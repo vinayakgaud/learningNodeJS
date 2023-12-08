@@ -33,6 +33,11 @@ app.route('/api/users/:id')
     //:id is express feature to indicate dynamic parameter
     const id = Number(req.params.id); //as id is number that's why type casting it to number as parameter we got is string
     const user = users.find(user => user.id === id)
+    if(!user) {
+        return res.status(404).json({
+            error: 'User not found'
+        })
+    }
     return res.json(user)
 })
 .patch((req, res)=>{
@@ -76,6 +81,11 @@ app.route('/api/users/:id')
 
 app.post('/api/users',(req, res)=>{
     const body = req.body;
+    if(!body || !body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title){
+        return res.status(400).json({ //400 Bad Request means payload sent have some data missing
+            error: 'Please fill all the fields'
+        })
+    }
     // console.log(body) //we are getting undefined here because express doesn't knwo what type of data is it, for it we need middleware, after setting up middleware we are getting data
     users.push({id:users.length+1, ...body}) //we have imported users.json as users and as it is array we are pushing one object to it
     //for id we are providing value, for remaining attributes we are saying use remaining value from vody variable, ...body, we cannot name is anything else, we are telling system to take variable parameter but take value from body variable
@@ -85,9 +95,8 @@ app.post('/api/users',(req, res)=>{
                 error: err
             })
         }else{
-            return res.json({
-                Status: 'Success',
-                userID: users.length
+            return res.status(201).json({ //status code : 201 is for created, when something is created using post or put status code is 201
+                Status: 'Success'
             });
         }
     })
