@@ -8,12 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon main",
     "rest": "nodemon \"Rest API\"/index",
-    "middleware": "nodemon Middleware/index"
+    "middleware": "nodemon Middleware/index",
+    "mongo": "nodemon mongodb/index"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "mongoose": "^8.0.3",
     "nodemon": "^3.0.2"
   }
 }

@@ -1,0 +1,19 @@
+mongosh is command for mongo shell
+mongodb use bson format which is best with node application
+mongo db haas collections instead of tables, and documents instead of rows and columns
+
+mongoose package to work with mongodb
+
+show dbs - show datbases
+use dbname - to use that database
+show collection - to show collections
+
+queru to find documents
+
+db.collectionName.find({}) - finds entries
+db.collectionName.insert({ can enter key value pair data in here}) - to insert key value pair data
+
+----
+Schema - Define structure
+    Schema - Model
+    Using Model we perform CRUD operations
