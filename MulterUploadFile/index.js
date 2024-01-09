@@ -24,7 +24,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/upload", upload.single("uploadFile"), (req, res) => {});
-
+app.use(function (err, req, res, next) {
+  res.json({
+    msg: "global catch for any error",
+  });
+});
 app.listen(PORT, () => {
   console.log(`Server is started on ${PORT}`);
 });
